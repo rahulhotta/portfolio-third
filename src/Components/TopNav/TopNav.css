@@ -1,0 +1,48 @@
+.TopNav_container {
+  --color_nav_bg: rgb(30, 41, 59);
+  --color_nav_txt: rgb(100, 116, 139);
+  --color_nav_ctg: rgb(226, 232, 240);
+  --color_nav_active: rgb(159, 154, 255);
+  --color_nav_not_active: rgb(61, 74, 94);
+  --color_nav_active_bg: rgb(15, 23, 42);
+
+  display: flex;
+  justify-content: flex-end;
+
+  width: 100vw;
+  height: 50px;
+  background: linear-gradient(to right, rgb(56, 65, 68) , rgb(0, 0, 0));
+  backdrop-filter: saturate(180%) blur(10px);
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.nav_toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: -1;
+  background-color: inherit;
+  border: 2px solid var(--color_nav_active);
+  color: var(--color_nav_active);
+  width: 35px;
+  aspect-ratio: 1/1;
+  margin: 10px;
+  border-radius: 10px;
+}
+.nav_toggle_hidden{
+    opacity: 0;
+}
+
+.nav_toggle svg {
+  font-size: 1.3rem;
+  color: var(--color_nav_active);
+  flex-shrink: 0;
+}
+@media screen and (min-width: 1024px) {
+  .TopNav_container {
+    display: none;
+  }
+}

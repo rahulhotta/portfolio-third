@@ -1,0 +1,100 @@
+/* For mobile */
+@import url("https://fonts.googleapis.com/css2?family=Secular+One&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital@1&display=swap');
+.home__container {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(132, 218, 255, 0.2),
+      rgba(0, 0, 0, 0.83)
+    ),
+    url("../../Images/homeBg2");
+  background-size: cover;
+  background-repeat: no-repeat;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.home__img {
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  margin: 10px 5px;
+  filter: drop-shadow(0.5rem 0.5rem 1rem rgba(106, 213, 255, 0.7));
+}
+.home__img {
+  width: 90vw;
+}
+@keyframes floating {
+  0% {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(0, 15px);
+  }
+  100% {
+    transform: translate(0, -0px);
+  }
+}
+.home__line1 {
+  font-family: 'Merriweather', serif;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+.home__line2 {
+  font-family: "Secular One", sans-serif;
+  color: var(--activeTextColor);
+  font-size: 2.5rem;
+}
+.home__line3 {
+  font-size: 1.8rem;
+}
+
+.home__text-container {
+  margin: 10px 5px;
+  height: 30vh;
+}
+.home__download-btn{
+  margin: 10px 5px;
+  padding: 10px 10px;
+  border-radius: 20px;
+  background-color: var(--NotActiveTextColor);
+  color: var(--activeTextColor);
+  border: 2px solid var(--activeTextColor);
+  font-weight: 600;
+  transition: all 0.4s ease-in-out;
+  font-size: 1rem;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+.home__download-btn:hover{
+  background-color: var(--activeTextColor);
+  color: var(--notActiveTextColor);
+}
+/* for desktop */
+@media screen and (min-width: 1024px) {
+  .home__container {
+    background-image: linear-gradient(
+        to right,
+        rgba(132, 218, 255, 0.2),
+        rgba(0, 0, 0, 0.58),
+        rgba(0, 0, 0, 0.83)
+      ),
+      url("../../Images/homeBg.jpeg");
+    flex-direction: row;
+  }
+  .home__img {
+    width: 35vw;
+  }
+  .home__text-container {
+    width: 30vw;
+    height: auto;
+  }
+  .home__line2 {
+    font-size: 4rem;
+  }
+  .home__line3 {
+    font-size: 2.2rem;
+  }
+}
