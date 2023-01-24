@@ -24,7 +24,7 @@ function Home() {
           </button>
         </a>
         <Link to={"about"}>
-          <Button>More About Me </Button>
+          <Button>More About Me</Button>
         </Link>
       </div>
     </div>
